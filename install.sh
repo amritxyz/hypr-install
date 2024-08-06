@@ -3,6 +3,7 @@ sudo pacman -Sy && sudo pacman -S brightnessctl hyprpaper imv lf mpv neovim ttf-
 
 # Remove Bloat
 sudo pacman -Rncsu vim dolphin nano dunst kitty ly
+sudo pacman -Scc && sudo pacman -Sy
 
 # MKdir
 mkdir -p ~/.local/share ~/.config
