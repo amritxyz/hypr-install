@@ -1,5 +1,5 @@
 # Installation
-sudo pacman -Sy && sudo pacman -S brightnessctl hyprpaper imv lf mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock newsboat mupdf
+sudo pacman -Sy && sudo pacman -S brightnessctl hyprpaper imv lf mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock newsboat mupdf noto-fonts-emoji
 
 # Remove Bloat
 sudo pacman -Rncsu vim dolphin nano dunst kitty ly
