@@ -16,3 +16,4 @@ git clone --depth=1 https://gitlab.com/amrit-44404/wall.git ~/.local/share/wall
 cp -r ~/hyprdots/.local/share/* ~/.local/share
 cp -r ~/hyprdots/.config/* ~/.config
 cp ~/hyprdots/.bashrc ~/.bashrc
+cp ~/hyprdots/.inputrc ~/.inputrc
