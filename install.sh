@@ -27,7 +27,7 @@ fi
 
 # Remove Bloat
 #sudo pacman -Rncsu vim dolphin nano dunst kitty ly
-#sudo pacman -Scc && sudo pacman -Sy
+sudo pacman -Scc && sudo pacman -Sy
 
 # MKdir
 mkdir -p ~/.local/share ~/.config ~/.local/bin
