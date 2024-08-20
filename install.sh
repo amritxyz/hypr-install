@@ -12,6 +12,7 @@ mkdir -p ~/.local/share ~/.config ~/.local/bin
 git clone --depth=1 https://gitlab.com/amrit-44404/hyprdots.git ~/hyprdots
 git clone --depth=1 https://gitlab.com/amrit-44404/wall.git ~/.local/share/wall
 git clone --depth=1 https://gitlab.com/amrit-44404/dmenu.git ~/.config/dmenu
+git clone --depth=1 https://gitlab.com/amrit-44404/dev.git ~/.local/dev
 
 # Managing Dotfiles
 cp -r ~/hyprdots/.local/share/* ~/.local/share
@@ -19,3 +20,6 @@ cp -r ~/hyprdots/.local/bin/* ~/.local/bin
 cp -r ~/hyprdots/.config/* ~/.config
 cp ~/hyprdots/.bashrc ~/.bashrc
 cp ~/hyprdots/.inputrc ~/.inputrc
+
+# DMenu
+sudo make -C ~/.config/dmenu/ clean install
