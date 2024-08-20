@@ -13,7 +13,7 @@ fi
 ### Install all of the imp pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    sudo pacman -Sy --needed base-devel \
+    sudo pacman -Sy --needed base-devel && \
     sudo pacman -S hyprland brightnessctl hyprpaper foot imv lf \
     mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
     unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
@@ -23,6 +23,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     echo -e "Starting the Bluetooth Service...\n"
     sudo systemctl enable --now bluetooth.service
     sleep 2
+fi
 
 # Remove Bloat
 #sudo pacman -Rncsu vim dolphin nano dunst kitty ly
