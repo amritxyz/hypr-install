@@ -30,7 +30,7 @@ fi
 sudo pacman -Scc && sudo pacman -Sy
 
 # MKdir
-mkdir -p ~/.local/share ~/.config ~/.local/bin
+mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos
 
 # Post Installation
 git clone --depth=1 https://gitlab.com/amrit-44404/hyprdots.git ~/hyprdots
@@ -43,3 +43,7 @@ cp -r ~/hyprdots/.local/bin/* ~/.local/bin
 cp -r ~/hyprdots/.config/* ~/.config
 cp ~/hyprdots/.bashrc ~/.bashrc
 cp ~/hyprdots/.inputrc ~/.inputrc
+
+# Cleaning Home Dir
+mv ~/hypr-install ~/.local/git-repos
+mv ~/hyprdots ~/.local/git-repos
