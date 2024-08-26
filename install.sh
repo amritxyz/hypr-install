@@ -17,7 +17,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     sudo pacman -S hyprland brightnessctl hyprpaper foot imv lf \
     mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
     unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
-    bluez bluez-utils htop
+    bluez bluez-utils htop grim slurp
 
     # Start the bluetooth service
     echo -e "Starting the Bluetooth Service...\n"
