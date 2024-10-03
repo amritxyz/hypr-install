@@ -18,7 +18,7 @@ fi
     mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
     unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
     bluez bluez-utils htop grim slurp vulkan-intel zed \
-    xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
+    xdg-desktop-portal-gtk xdg-desktop-portal-lxqt man-db
 # xf86-video-intel
 
 # fi
@@ -31,9 +31,9 @@ fi
 mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-dir
 
 # Post Installation
-git clone --depth=1 https://github.com/nyx-void/hyprdots.git ~/hyprdots
-git clone --depth=1 https://github.com/nyx-void/wall.git ~/.local/share/wall
-# git clone --depth=1 https://github.com/nyx-void/dev.git ~/.local/dev
+git clone --depth=1 https://gitlab.com/NyxVoid/hyprdots.git/ ~/hyprdots
+git clone --depth=1 https://gitlab.com/NyxVoid/wall.git/ ~/.local/share/wall
+git clone --depth=1 https://gitlab.com/NyxVoid/dev.git/ ~/.local/dev
 
 # Managing Dotfiles
 cp -r ~/hyprdots/.local/share/* ~/.local/share
