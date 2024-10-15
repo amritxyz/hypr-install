@@ -17,8 +17,9 @@ fi
     sudo pacman -S hyprland brightnessctl hyprpaper foot imv lf \
     mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
     unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
-    bluez bluez-utils htop grim slurp vulkan-intel zed \
-    xdg-desktop-portal-gtk xdg-desktop-portal-lxqt man-db
+    bluez bluez-utils htop grim slurp man-db \
+# vulkan-intel zed
+# xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
 # xf86-video-intel
 
 # fi
