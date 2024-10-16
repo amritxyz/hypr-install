@@ -10,6 +10,8 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
     sleep 5
 fi
 
+sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
+
 ### Install all of the imp pacakges ####
 # read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 # if [[ $INST == "Y" || $INST == "y" ]]; then
