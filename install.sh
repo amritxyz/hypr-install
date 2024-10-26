@@ -1,6 +1,6 @@
 # Disable Wifi-Power Saver
-read -n1 -rep 'Would you like to disable wifi powersave? (y,n)' WIFI
-if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
+read -n1 -rep 'Would you like to disable wifi powersave? (Y,n)' WIFI
+if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
     LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
     echo -e "The following has been added to $LOC.\n"
     echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC
