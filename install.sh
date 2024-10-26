@@ -13,19 +13,18 @@ fi
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
 ### Install all of the imp pacakges ####
-# read -n1 -rep 'Would you like to install the packages? (y,n)' INST
-# if [[ $INST == "Y" || $INST == "y" ]]; then
+read -n1 -rep 'Would you like to install the packages? (Y,n)' INST
+if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
     sudo pacman -Sy --needed base-devel && \
     sudo pacman -S hyprland brightnessctl hyprpaper foot imv lf \
     mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
     unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
     bluez bluez-utils htop grim slurp man-db \
-# vulkan-intel zed
-# xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
+    vulkan-intel zed \
+    xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
+fi
+
 # xf86-video-intel
-
-# fi
-
 # Remove Bloat
 # sudo pacman -Rncsu vim dolphin nano dunst kitty ly
 # sudo pacman -Scc && sudo pacman -Sy
