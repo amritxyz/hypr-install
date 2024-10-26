@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Disable Wifi-Power Saver
 read -n1 -rep 'Would you like to disable wifi powersave? (Y,n)' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
