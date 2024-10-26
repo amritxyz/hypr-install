@@ -53,6 +53,7 @@ mv ~/hyprdots ~/.local/git-repos
 # Start the bluetooth service
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
+
 cat << "EOF"
 ########################################
 
