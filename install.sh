@@ -3,13 +3,13 @@
 # Disable Wifi-Power Saver
 read -n1 -rep 'Would you like to disable wifi powersave? (Y,n)' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
-    LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
-    echo -e "The following has been added to $LOC.\n"
-    echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC
-    echo -e "\n"
-    echo -e "Restarting NetworkManager service...\n"
-    sudo systemctl restart NetworkManager
-    sleep 5
+	LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
+	echo -e "The following has been added to $LOC.\n"
+	echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC
+	echo -e "\n"
+	echo -e "Restarting NetworkManager service...\n"
+	sudo systemctl restart NetworkManager
+	sleep 5
 fi
 
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
@@ -17,15 +17,13 @@ sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.con
 ### Install all of the imp pacakges ####
 read -n1 -rep 'Would you like to install the packages? (Y,n)' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
-    sudo pacman -Sy --needed base-devel && \
-    sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
-    mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch \
-    unzip hyprlock newsboat mupdf noto-fonts-emoji wtype wofi \
-    bluez bluez-utils htop grim slurp man-db \
-    vulkan-intel zed \
-    xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
+	sudo pacman -Sy --needed base-devel && \
+		sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
+		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
+		newsboat mupdf noto-fonts-emoji wtype wofi htop grim slurp man-db \
+		vulkan-intel zed xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
 fi
-
+# bluez bluez-utils
 # xf86-video-intel
 # Remove Bloat
 # sudo pacman -Rncsu vim dolphin nano dunst kitty ly
@@ -56,9 +54,7 @@ sudo systemctl start bluetooth.service
 
 cat << "EOF"
 ########################################
-
 Installation Completed Successfully
-
 ########################################
 EOF
 
