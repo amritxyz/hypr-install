@@ -21,7 +21,8 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
 		newsboat mupdf noto-fonts-emoji wtype wofi htop grim slurp man-db \
-		vulkan-intel zed xdg-desktop-portal-gtk xdg-desktop-portal-lxqt
+		vulkan-intel zed xdg-desktop-portal-gtk xdg-desktop-portal-lxqt \
+		rust go wget tmux wl-clipboard
 fi
 # bluez bluez-utils
 # xf86-video-intel
