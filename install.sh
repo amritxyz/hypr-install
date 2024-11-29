@@ -22,16 +22,15 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
 		newsboat mupdf noto-fonts-emoji wtype wofi htop grim slurp man-db \
 		vulkan-intel zed xdg-desktop-portal-gtk xdg-desktop-portal-lxqt \
-		rust go wget tmux wl-clipboard
+		rust go wget tmux wl-clipboard bluez bluez-utils
 fi
-# bluez bluez-utils
 # xf86-video-intel
 # Remove Bloat
 # sudo pacman -Rncsu vim dolphin nano dunst kitty ly
 # sudo pacman -Scc && sudo pacman -Sy
 
 # MKdir
-mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-dir
+mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-dir ~/.local/dox ~/.local/vids
 
 # Post Installation
 git clone --depth=1 https://gitlab.com/NyxVoid/hyprdots.git/ ~/hyprdots
