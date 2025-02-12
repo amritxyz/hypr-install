@@ -28,11 +28,11 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
 		newsboat mupdf noto-fonts-emoji wtype wofi htop grim slurp man-db \
-		vulkan-intel xdg-desktop-portal-gtk xdg-desktop-portal-lxqt \
+		vulkan-intel xdg-desktop-portal-gtk \
 		gimp wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs zed \
 		rust go wget tmux wl-clipboard bluez bluez-utils adwaita-icon-theme
 fi
-# xf86-video-intel
+# xf86-video-intel xdg-desktop-portal-lxqt 
 # Remove Bloat
 # sudo pacman -Rncsu vim dolphin nano dunst kitty ly
 # sudo pacman -Scc && sudo pacman -Sy
