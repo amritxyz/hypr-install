@@ -27,7 +27,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
 		sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
-		newsboat mupdf noto-fonts-emoji wtype wofi htop grim slurp man-db \
+		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs \
 		gimp wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs zed \
 		rust go jdk23-openjdk tmux wl-clipboard bluez bluez-utils
