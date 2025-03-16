@@ -26,7 +26,7 @@ read -rep 'Would you like to install the packages? [Y/n] ' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
 		sudo pacman -S --needed tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
-		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
+		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock ripgrep \
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
 		gimp wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs zed \
