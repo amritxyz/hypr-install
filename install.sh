@@ -44,7 +44,7 @@ mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-
 git clone --depth=1 https://github.com/amritxyz/hyprdots.git/ ~/hyprdots
 git clone --depth=1 https://github.com/amritxyz/wall.git/ ~/.local/share/wall
 git clone --depth=1 https://github.com/amritxyz/dev.git/ ~/.local/dev
-git clone --depth=1 https://github.com/amritxyz/nvim.git ~/.config/nvim
+git clone --depth=1 https://github.com/amritxyz/kickstart-nvim.git ~/.config/nvim
 
 # Managing Dotfiles
 cp -r ~/hyprdots/.local/share/* ~/.local/share
