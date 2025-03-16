@@ -41,10 +41,10 @@ fi
 mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-dir ~/.local/dox ~/.local/vids ~/.local/music ~/.local/audio
 
 # Post Installation
-git clone --depth=1 https://gitlab.com/amritxyz/hyprdots.git/ ~/hyprdots
-git clone --depth=1 https://gitlab.com/amritxyz/wall.git/ ~/.local/share/wall
-git clone --depth=1 https://gitlab.com/amritxyz/dev.git/ ~/.local/dev
-git clone --depth=1 https://gitlab.com/amritxyz/nvim.git ~/.config/nvim
+git clone --depth=1 https://github.com/amritxyz/hyprdots.git/ ~/hyprdots
+git clone --depth=1 https://github.com/amritxyz/wall.git/ ~/.local/share/wall
+git clone --depth=1 https://github.com/amritxyz/dev.git/ ~/.local/dev
+git clone --depth=1 https://github.com/amritxyz/nvim.git ~/.config/nvim
 
 # Managing Dotfiles
 cp -r ~/hyprdots/.local/share/* ~/.local/share
