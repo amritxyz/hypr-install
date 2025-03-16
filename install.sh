@@ -25,7 +25,7 @@ sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 3/" /etc/pacman.conf
 read -rep 'Would you like to install the packages? [Y/n] ' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
-		sudo pacman -S tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
+		sudo pacman -S --needed tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock \
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
