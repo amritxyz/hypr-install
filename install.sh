@@ -29,10 +29,10 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock ripgrep \
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
-		gimp wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs zed \
+		gimp wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs \
 		rust go jdk23-openjdk tmux wl-clipboard bluez bluez-utils pulsemixer
 fi
-# xf86-video-intel xdg-desktop-portal-lxqt
+# xf86-video-intel xdg-desktop-portal-lxqt zed
 # Remove Bloat
 # sudo pacman -Rncsu vim dolphin nano dunst kitty ly
 # sudo pacman -Scc && sudo pacman -Sy
