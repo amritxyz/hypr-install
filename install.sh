@@ -30,7 +30,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
 		gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs \
-		rust go jdk-openjdk tmux wl-clipboard bluez bluez-utils pulsemixer
+		rust go jdk-openjdk tmux wl-clipboard bluez bluez-utils pulsemixer php
 fi
 # xf86-video-intel xdg-desktop-portal-lxqt zed gimp
 # Remove Bloat
