@@ -29,7 +29,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock ripgrep \
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
-		imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs \
+		gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs \
 		rust go jdk-openjdk tmux wl-clipboard bluez bluez-utils pulsemixer
 fi
 # xf86-video-intel xdg-desktop-portal-lxqt zed gimp
