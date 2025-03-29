@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Cleanup first
-read -rep 'Would you like to cleanup Home Dir? [Y/n] ' DLT
+read -rep ':: Would you like to cleanup Home Dir? [Y/n] ' DLT
 if [[ $DLT == "Y" || $DLT == "y" || -z $DLT ]]; then
 	sudo rm -rf $HOME/.[!.]*
 fi
 
 # Disable Wifi-Power Saver
-read -rep 'Would you like to disable wifi powersave? [Y/n] ' WIFI
+read -rep ':: Would you like to disable wifi powersave? [Y/n] ' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
 	LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
 	echo -e "The following has been added to $LOC.\n"
@@ -19,10 +19,10 @@ if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
 fi
 
 # Parallel Downloads
-sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 3/" /etc/pacman.conf
+# sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 3/" /etc/pacman.conf
 
 ### Install all of the imp pacakges ####
-read -rep 'Would you like to install the packages? [Y/n] ' INST
+read -rep ':: Would you like to install the packages? [Y/n] ' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
 		sudo pacman -S --needed tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
