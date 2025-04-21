@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # Cleanup first
-read -rep ':: Would you like to cleanup Home Dir? [Y/n] ' DLT
-if [[ $DLT == "Y" || $DLT == "y" || -z $DLT ]]; then
+read -rep ':: Would you like to cleanup Home Dir? [y/N] ' DLT
+if [[ $DLT == "N" || $DLT == "n" || -z $DLT ]]; then
+	echo "Exiting..."
+	break
+else
+	echo "Cleaning..."
 	sudo rm -rf $HOME/.[!.]*
 fi
 
@@ -18,8 +22,15 @@ if [[ $WIFI == "Y" || $WIFI == "y" || -z $WIFI ]]; then
 	sleep 5
 fi
 
-# Parallel Downloads
-# sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 3/" /etc/pacman.conf
+# Enable Multi-Lib Packages
+read -rep ':: Would you like to enable "Multilib Packages" [Y/n] ' MULLIB
+if [[ $MULLIB == "Y" || $MULLIB == "y" || -z $MULLIB ]]; then
+	sudo cp /etc/pacman.conf /etc/pacman.conf.backup
+	mline=$(grep -n "\\[multilib\\]" /etc/pacman.conf | cut -d: -f1)
+	rline=$(($mline + 1))
+	sudo sed -i ''$mline's|#\[multilib\]|\[multilib\]|g' /etc/pacman.conf
+	sudo sed -i ''$rline's|#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|g' /etc/pacman.conf
+fi
 
 ### Install all of the imp pacakges ####
 read -rep ':: Would you like to install the packages? [Y/n] ' INST
@@ -28,9 +39,9 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		sudo pacman -S --needed tesseract-data-nep hyprland brightnessctl hyprpaper foot imv lf \
 		mpv neovim ttf-hack ttf-hack-nerd waybar bleachbit fastfetch unzip hyprlock ripgrep \
 		newsboat noto-fonts-emoji wtype wofi htop grim slurp man-db zathura zathura-pdf-poppler \
-		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
-		gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat nodejs npm \
-		rust go jdk-openjdk tmux wl-clipboard bluez bluez-utils pulsemixer php
+		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder gimp imagemagick \
+		gnu-free-fonts wget deluge-gtk fzf curl cmatrix gnu-netcat wl-clipboard bluez bluez-utils pulsemixer \
+		rust go jdk-openjdk tmux php nodejs npm
 fi
 # xf86-video-intel xdg-desktop-portal-lxqt zed gimp
 # Remove Bloat
@@ -61,6 +72,10 @@ mv ~/hyprdots ~/.local/git-repos
 # Start the bluetooth service
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
+
+# Just a empty directory for working stuffs
+sudo mkdir -p /opt/void
+sudo chown $USER:$USER /opt/void/
 
 cat << "EOF"
 ########################################
